@@ -11,12 +11,12 @@ const syncWindowHeight = () => {
 // for iOS 15, prevents re-hiding of footer
 modal.addEventListener('pointermove', e => {
    // e.preventDefault()
-})
+}, { passive: true });
  
 // bonus for iOS 14, prevents re-hiding of footer
 modal.addEventListener('touchmove', e => {
  //   e.preventDefault()
-})
+}, { passive: true });
 
 // this locks the body and remembers the scroll position
 let scrollY;
@@ -29,7 +29,7 @@ document.documentElement.addEventListener('click', (e) => {
         scrollY = window.scrollY;
         document.documentElement.classList.add('lock');
 
-        window.addEventListener("resize", syncWindowHeight);
+        window.addEventListener("resize", syncWindowHeight, { passive: true });
 
     }
     else if (e.target.dataset.action==='close') {
@@ -39,3 +39,4 @@ document.documentElement.addEventListener('click', (e) => {
         window.scrollTo(0, scrollY);
     }
 });
+
