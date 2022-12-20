@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const modal = document.querySelector('[data-modal]');
 
 // this syncs the window height
@@ -39,4 +41,6 @@ document.documentElement.addEventListener('click', (e) => {
         window.scrollTo(0, scrollY);
     }
 });
+});
+
 
