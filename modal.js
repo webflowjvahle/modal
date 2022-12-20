@@ -9,12 +9,12 @@ const syncWindowHeight = () => {
 }
 
 // for iOS 15, prevents re-hiding of footer
-document.querySelector('[data-modal]');.addEventListener('pointermove', e => {
+modal.addEventListener('pointermove', e => {
    // e.preventDefault()
 })
  
 // bonus for iOS 14, prevents re-hiding of footer
-document.querySelector('[data-modal]');.addEventListener('touchmove', e => {
+modal.addEventListener('touchmove', e => {
  //   e.preventDefault()
 })
 
@@ -38,4 +38,4 @@ document.documentElement.addEventListener('click', (e) => {
         document.documentElement.classList.remove('lock');
         window.scrollTo(0, scrollY);
     }
-})
+});
